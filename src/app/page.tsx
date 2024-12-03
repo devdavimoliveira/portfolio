@@ -1,3 +1,9 @@
+import { Skills } from '@/components/skills'
+
 export default function Home() {
-  return <div>Portfolio</div>
+  return (
+    <main>
+      <Skills />
+    </main>
+  )
 }
