@@ -4,6 +4,8 @@ import '@/styles/globals.css'
 
 import { roboto } from '@/styles/fonts'
 
+import { Header } from '@/components/_layout/header'
+
 export const metadata: Metadata = {
   title: 'Portfólio | Davi Machado Oliveira',
   description:
@@ -17,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.variable} antialiased`}>{children}</body>
+      <body className={`${roboto.variable} antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
