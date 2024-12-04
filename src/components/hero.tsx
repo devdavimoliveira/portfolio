@@ -66,7 +66,7 @@ export function Hero() {
           <span className="text-base sm:text-xl">{role}</span>
         </p>
 
-        <Button className="mx-auto mt-4 block px-10 sm:mx-0">
+        <Button variant="outlined" className="mx-auto mt-4 block px-10 sm:mx-0">
           <a
             href={
               /* cspell: disable-next-line */
