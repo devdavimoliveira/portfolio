@@ -15,7 +15,7 @@ import { Button } from './button'
 const paragraph = {
   welcome: 'Olá, meu nome é',
   developer: 'Davi Machado Oliveira.',
-  role: 'Desenvolvedor Frontend',
+  role: 'Desenvolvedor Front-end',
 }
 
 export function Hero() {
@@ -68,8 +68,14 @@ export function Hero() {
 
         <Button className="mx-auto mt-4 block px-10 sm:mx-0">
           <a
-            href="/curriculo_davi_machado_oliveira.pdf"
-            download="davi-machado-oliveira-curriculo"
+            href={
+              /* cspell: disable-next-line */
+              '/curriculo_davi_machado_oliveira.pdf'
+            }
+            download={
+              /* cspell: disable-next-line */
+              'davi-machado-oliveira-curriculo'
+            }
             className="flex h-full items-center justify-center"
           >
             Currículo
