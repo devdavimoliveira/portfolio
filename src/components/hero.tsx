@@ -8,7 +8,7 @@ import {
   useState,
 } from 'react'
 
-import developerAvatar from '@/assets/me.jpg'
+import code from '@/assets/code.svg'
 import Image from 'next/image'
 import { Button } from './button'
 
@@ -46,13 +46,16 @@ export function Hero() {
 
   return (
     <section className="mx-auto my-10 flex max-w-6xl flex-col items-center justify-center gap-5 px-4 sm:flex-row sm:justify-between">
-      <div className="size-[12.5rem] shrink-0 rounded-full bg-zinc-800 p-2 sm:order-1 sm:size-[17.5rem]">
-        <Image
-          src={developerAvatar}
-          alt="avatar"
-          priority
-          className="size-full rounded-full object-cover"
-        />
+      <div className="flex size-[11.25rem] shrink-0 items-center justify-center rounded-full bg-zinc-800 sm:order-1 sm:size-[13.75rem]">
+        <div className="relative size-[6.25rem] sm:size-[7.5rem]">
+          <Image
+            src={code}
+            alt="code"
+            priority
+            fill
+            className="size-full rounded-full object-cover"
+          />
+        </div>
       </div>
 
       <div className="w-full sm:w-auto">
