@@ -1,9 +1,27 @@
+'use client'
+
+import { useRef } from 'react'
+
 import { Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
+import { motion, useInView } from 'motion/react'
+
 export function Contact() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   return (
-    <section className="mx-auto max-w-6xl px-4">
+    <motion.section
+      ref={ref}
+      className="mx-auto max-w-6xl px-4"
+      initial={{ x: '-10%', opacity: 0 }}
+      animate={{
+        x: isInView ? '0%' : '-10%',
+        opacity: isInView ? 1 : 0,
+      }}
+      transition={{ ease: 'easeOut' }}
+    >
       <h2 className="mb-10 text-center text-3xl font-bold">Contato</h2>
       <ul className="flex flex-wrap justify-center gap-5">
         <li>
@@ -36,6 +54,6 @@ export function Contact() {
           </Link>
         </li>
       </ul>
-    </section>
+    </motion.section>
   )
 }
