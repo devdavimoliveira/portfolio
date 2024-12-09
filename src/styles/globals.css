@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: #16a34a #27272a;
 }
 
 body {
