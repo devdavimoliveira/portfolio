@@ -41,8 +41,8 @@ export function OverlayMenu({ isOpen, onOpenChange }: OverlayMenuProps) {
           className="absolute h-screen w-full bg-zinc-900/50 backdrop-blur-md"
           onClick={() => onOpenChange(false)}
         >
-          <div className="mx-auto h-[200px] max-w-6xl px-4">
-            <ul className="mt-20 flex flex-col items-center gap-16">
+          <div className="mx-auto mt-20 max-w-6xl">
+            <ul className="flex flex-col items-center gap-16">
               <li>
                 <Link
                   href="#inicio"
