@@ -29,8 +29,11 @@ export function Projects() {
           <ProjectCard
             key={index}
             data={{
-              name: 'Padaria Delicious',
+              name: 'Bakery landing page',
+              description:
+                'Landing page de um comércio fictício (padaria) com design simples e elegante destacando seus produtos.',
               image: bakery,
+              link: '#',
             }}
           />
         ))}
