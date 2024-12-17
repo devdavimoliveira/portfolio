@@ -1,7 +1,10 @@
 'use client'
 
-import { Menu as MenuHamburger, X } from 'lucide-react'
 import { useState } from 'react'
+import Link from 'next/link'
+
+import { Menu as MenuHamburger, X } from 'lucide-react'
+
 import { OverlayMenu } from './overlay-menu'
 
 export function Header() {
@@ -14,12 +17,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-zinc-900 shadow-sm shadow-green-600/10">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4">
-        <div>
+        <Link href="#">
           <span className="text-3xl font-bold uppercase text-green-600">
             DEV.
           </span>
           <span className="text-2xl">davimoliveira</span>
-        </div>
+        </Link>
 
         <button onClick={toggleMenu}>
           {menuOpen ? (
