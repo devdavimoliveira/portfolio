@@ -14,6 +14,7 @@ export function Projects() {
 
   return (
     <motion.section
+      id="projetos"
       ref={ref}
       className="mx-auto my-10 max-w-6xl px-4"
       initial={{ x: '-10%', opacity: 0 }}

@@ -13,8 +13,9 @@ export function Contact() {
 
   return (
     <motion.section
+      id="contato"
       ref={ref}
-      className="mx-auto max-w-6xl px-4"
+      className="mx-auto my-10 max-w-6xl px-4"
       initial={{ x: '-10%', opacity: 0 }}
       animate={{
         x: isInView ? '0%' : '-10%',

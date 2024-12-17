@@ -45,7 +45,10 @@ export function Hero() {
   }, [typewriter])
 
   return (
-    <section className="mx-auto my-10 flex max-w-6xl flex-col items-center justify-center gap-5 px-4 sm:flex-row sm:justify-between">
+    <section
+      id="inicio"
+      className="mx-auto my-10 flex max-w-6xl flex-col items-center justify-center gap-5 px-4 sm:flex-row sm:justify-between"
+    >
       <div className="flex size-[11.25rem] shrink-0 items-center justify-center rounded-full bg-zinc-800 sm:order-1 sm:size-[13.75rem]">
         <div className="relative size-[6.25rem] sm:size-[7.5rem]">
           <Image

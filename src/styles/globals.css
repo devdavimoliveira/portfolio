@@ -12,6 +12,10 @@ html {
   scrollbar-color: #16a34a #27272a;
 }
 
+section[id] {
+  scroll-margin-top: calc(5rem + 2.5rem); /* soma da altura do 'header' mais a 'margin-top' das 'sections' */
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

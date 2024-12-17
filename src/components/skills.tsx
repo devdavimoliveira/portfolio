@@ -24,6 +24,7 @@ export function Skills() {
 
   return (
     <motion.section
+      id="conhecimentos"
       ref={ref}
       className="mx-auto my-10 max-w-6xl px-4"
       initial={{ x: '-10%', opacity: 0 }}

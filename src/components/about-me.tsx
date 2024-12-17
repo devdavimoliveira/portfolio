@@ -9,8 +9,9 @@ export function AboutMe() {
 
   return (
     <motion.section
+      id="sobre-mim"
       ref={ref}
-      className="mx-4 max-w-6xl border-b border-green-600 min-[1152px]:mx-auto"
+      className="mx-4 my-10 max-w-6xl border-b border-green-600 min-[1152px]:mx-auto"
       initial={{ x: '-10%', opacity: 0 }}
       animate={{
         x: isInView ? '0%' : '-10%',
