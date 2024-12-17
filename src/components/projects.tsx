@@ -6,7 +6,7 @@ import { motion, useInView } from 'motion/react'
 
 import ProjectCard from './project-card'
 
-import bakery from '@/assets/projects/bakery.png'
+import { projects } from '@/data/projects'
 
 export function Projects() {
   const ref = useRef(null)
@@ -25,17 +25,8 @@ export function Projects() {
     >
       <h2 className="mb-10 text-center text-3xl font-bold">Projetos</h2>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        {Array.from({ length: 4 }).map((_, index) => (
-          <ProjectCard
-            key={index}
-            data={{
-              name: 'Bakery landing page',
-              description:
-                'Landing page de um comércio fictício (padaria) com design simples e elegante destacando seus produtos.',
-              image: bakery,
-              link: '#',
-            }}
-          />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} data={project} />
         ))}
       </div>
     </motion.section>
