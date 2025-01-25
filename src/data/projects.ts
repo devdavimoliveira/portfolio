@@ -4,6 +4,7 @@ import bakery from '@/assets/projects/bakery.png'
 import selfService from '@/assets/projects/self-service.png'
 import curiosidadeDispersa from '@/assets/projects/curiosidadedispersa.png'
 import movieBox from '@/assets/projects/movie-box.png'
+import calculaDownload from '@/assets/projects/calculadownload.png'
 
 export type Project = {
   name: string
@@ -13,6 +14,13 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+  {
+    name: 'Calcula Download',
+    description:
+      'Uma ferramenta que permite determinar quanto tempo leva para baixar ou enviar arquivos com base na velocidade da sua conexão. Rápido, simples e preciso!',
+    image: calculaDownload,
+    link: 'https://www.calculadownload.com.br',
+  },
   {
     name: 'Self-service',
     description:
