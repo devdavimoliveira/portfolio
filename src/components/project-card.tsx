@@ -2,7 +2,6 @@
 
 import { ComponentProps, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { AnimatePresence, motion } from 'motion/react'
 
@@ -75,8 +74,13 @@ export default function ProjectCard({
                   <Dialog.Description className="h-40 overflow-y-auto text-lg text-gray-500">
                     {data.description}
                   </Dialog.Description>
-                  <Button className="mt-4 w-full md:mt-auto">
-                    <Link href={data.link}>Acessar</Link>
+                  <Button
+                    as="link"
+                    href={data.link}
+                    target="_blank"
+                    className="mt-4 md:mt-auto"
+                  >
+                    Acessar
                   </Button>
                 </div>
 
