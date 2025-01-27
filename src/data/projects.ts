@@ -1,6 +1,5 @@
 import { StaticImageData } from 'next/image'
 
-import bakery from '@/assets/projects/bakery.png'
 import selfService from '@/assets/projects/self-service.png'
 import curiosidadeDispersa from '@/assets/projects/curiosidadedispersa.png'
 import movieBox from '@/assets/projects/movie-box.png'
@@ -40,12 +39,5 @@ export const projects: Project[] = [
     description: 'Site informativo sobre filmes e séries.',
     image: movieBox,
     link: '#movie-box',
-  },
-  {
-    name: 'Bakery landing page',
-    description:
-      'Landing page de um comércio fictício (padaria) com design simples e elegante destacando seus produtos.',
-    image: bakery,
-    link: '#bakery-landing-page',
   },
 ]
