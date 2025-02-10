@@ -10,7 +10,7 @@ export type Project = {
   name: string
   description: string
   image: StaticImageData
-  link: string
+  link: string | null
 }
 
 export const projects: Project[] = [
@@ -32,19 +32,19 @@ export const projects: Project[] = [
     description:
       'Sistema de autoatendimento para restaurante com as seguintes funções: exibição do cardápio, personalização de pedidos, pagamento online e opções de retirada ou entrega.',
     image: selfService,
-    link: '#self-service',
+    link: null,
   },
   {
     name: 'Curiosidade Dispersa',
     description:
       'Site de artigos sobre fatos surpreendentes e informações intrigantes que vão entreter e ampliar o conhecimento.',
     image: curiosidadeDispersa,
-    link: '#curiosidade-dispersa',
+    link: null,
   },
   {
     name: 'Movie Box',
     description: 'Site informativo sobre filmes e séries.',
     image: movieBox,
-    link: '#movie-box',
+    link: null,
   },
 ]

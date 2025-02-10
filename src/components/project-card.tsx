@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'motion/react'
 
 import { cn } from '@/utils/cn'
 
-import { X } from 'lucide-react'
+import { ExternalLink, X } from 'lucide-react'
 
 import { Button } from './button'
 import * as Dialog from '@radix-ui/react-dialog'
@@ -42,11 +42,17 @@ export default function ProjectCard({
             className="object-cover"
           />
           <div className="absolute left-1/2 top-1/2 z-10 w-full -translate-x-1/2 -translate-y-1/2">
-            <p className="text-center text-2xl font-bold text-white">
+            <p className="text-center text-2xl font-bold text-foreground">
               {data.name}
             </p>
           </div>
           <div className="absolute inset-0 bg-black bg-opacity-50" />
+          {data.link !== null && (
+            <ExternalLink
+              size={32}
+              className="absolute right-2 top-2 text-green-600"
+            />
+          )}
         </div>
       </Dialog.Trigger>
       <AnimatePresence>
@@ -74,14 +80,16 @@ export default function ProjectCard({
                   <Dialog.Description className="h-40 overflow-y-auto text-lg text-gray-500">
                     {data.description}
                   </Dialog.Description>
-                  <Button
-                    as="link"
-                    href={data.link}
-                    target="_blank"
-                    className="mt-4 md:mt-auto"
-                  >
-                    Acessar
-                  </Button>
+                  {data.link !== null && (
+                    <Button
+                      as="link"
+                      href={data.link}
+                      target="_blank"
+                      className="mt-4 md:mt-auto"
+                    >
+                      Acessar
+                    </Button>
+                  )}
                 </div>
 
                 <Dialog.Close asChild>
