@@ -5,6 +5,7 @@ import curiosidadeDispersa from '@/assets/projects/curiosidadedispersa.png'
 import movieBox from '@/assets/projects/movie-box.png'
 import calculaDownload from '@/assets/projects/calculadownload.png'
 import providerLandingPage from '@/assets/projects/provider-landing-page.png'
+import radiomy from '@/assets/projects/radiomy.png'
 
 export type Project = {
   name: string
@@ -14,6 +15,13 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+  {
+    name: 'Radiomy',
+    description:
+      'O Radiomy é uma plataforma que oferece várias estações de rádio para ouvir.',
+    image: radiomy,
+    link: 'https://radiomy.vercel.app',
+  },
   {
     name: 'Calcula Download',
     description:
