@@ -26,23 +26,35 @@ export function Hero() {
   const typewriter = useCallback(
     async (
       text: string,
-      callback: Dispatch<SetStateAction<string>>,
-      i = 0,
+      setText: Dispatch<SetStateAction<string>>,
     ): Promise<void> => {
-      if (i < text.length) {
-        callback(text.slice(0, i + 1))
+      for (let i = 0; i <= text.length; i++) {
+        setText(text.slice(0, i))
         await new Promise((resolve) => setTimeout(resolve, 100))
-        await typewriter(text, callback, i + 1)
       }
     },
     [],
   )
 
   useEffect(() => {
-    typewriter(paragraph.welcome, setWelcome)
-      .then(() => typewriter(paragraph.developer, setDeveloper))
-      .then(() => typewriter(paragraph.role, setRole))
+    async function runTypewriter() {
+      await typewriter(paragraph.welcome, setWelcome)
+      await typewriter(paragraph.developer, setDeveloper)
+      await typewriter(paragraph.role, setRole)
+    }
+
+    runTypewriter()
   }, [typewriter])
+
+  function handleCVDownload() {
+    const link = document.createElement('a')
+    link.href = '/curriculo_davi_machado_oliveira.pdf'
+    link.download = 'davi-machado-oliveira-curriculo'
+
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <section
@@ -72,20 +84,13 @@ export function Hero() {
           <span className="text-base sm:text-xl">{role}</span>
         </p>
 
-        <Button variant="outlined" className="mx-auto mt-4 block px-10 sm:mx-0">
-          <a
-            href={
-              /* cspell: disable-next-line */
-              '/curriculo_davi_machado_oliveira.pdf'
-            }
-            download={
-              /* cspell: disable-next-line */
-              'davi-machado-oliveira-curriculo'
-            }
-            className="flex h-full items-center justify-center"
-          >
-            Currículo
-          </a>
+        <Button
+          type="button"
+          variant="outlined"
+          className="mx-auto mt-4 block px-10 sm:mx-0"
+          onClick={handleCVDownload}
+        >
+          Currículo
         </Button>
       </div>
     </section>
