@@ -19,7 +19,7 @@ export function SkillCard({
   return (
     <div
       className={twMerge(
-        'flex h-[120px] w-[120px] flex-col items-center justify-center gap-5 border border-zinc-700 bg-zinc-800 transition-all duration-500 hover:border-green-600',
+        'flex size-[130px] flex-col items-center justify-center gap-5 border border-zinc-700 bg-zinc-800 transition-all duration-500 hover:border-green-600',
         className,
       )}
       {...props}
