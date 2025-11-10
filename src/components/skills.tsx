@@ -12,6 +12,7 @@ import sass from '@/assets/sass.svg'
 import node from '@/assets/nodejs.svg'
 import prisma from '@/assets/prisma.svg'
 import tanstack from '@/assets/tanstack.png'
+import vite from '@/assets/vite.svg'
 
 import { motion, useInView } from 'motion/react'
 
@@ -42,6 +43,7 @@ export function Skills() {
         <SkillCard name="TypeScript" source={typescript} alt="Typescript" />
         <SkillCard name="React.js" source={reactJs} alt="React.js" />
         <SkillCard name="Next.js" source={nextJs} alt="Next.js" />
+        <SkillCard name="Vite" source={vite} alt="Vite" />
         <SkillCard
           name="Tanstack Query"
           source={tanstack}
