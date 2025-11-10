@@ -1,11 +1,11 @@
 import { ComponentProps } from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import { twMerge } from 'tailwind-merge'
 
 type SkillCardProps = ComponentProps<'div'> & {
   name: string
-  source: string
+  source: string | StaticImageData
   alt: string
 }
 
