@@ -15,7 +15,7 @@ import { Button } from './button'
 const paragraph = {
   welcome: 'Olá, meu nome é',
   developer: 'Davi Machado Oliveira.',
-  role: 'Desenvolvedor Front-end',
+  role: 'Desenvolvedor Web',
 }
 
 export function Hero() {

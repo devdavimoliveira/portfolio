@@ -21,10 +21,10 @@ export function AboutMe() {
     >
       <h2 className="mb-5 text-center text-3xl font-bold">Sobre mim</h2>
       <p className="mx-auto mb-10 w-full text-center text-lg md:w-[58%]">
-        Desenvolvedor Front-end com experiência em React.js, Next.js JavaScript,
-        TypeScript, Styled-Components, TailwindCSS e consumo de APIs REST.
-        Também possuo um pouco de experiência no Back-end com NestJS e Prisma
-        ORM. Formado em Sistemas de Informação.
+        Desenvolvedor Web com experiência em React.js, Next.js, JavaScript,
+        TypeScript, TailwindCSS, CSS-in-JS, entre outras tecnologias.
+        Além de também possuir experiência no desenvolvimento Back-end com Fastify e NestJS.
+        Formado em Sistemas de Informação.
       </p>
     </motion.section>
   )
