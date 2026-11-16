@@ -47,12 +47,10 @@ export default function ProjectCard({
             </p>
           </div>
           <div className="absolute inset-0 bg-black bg-opacity-50" />
-          {data.link !== null && (
-            <ExternalLink
-              size={32}
-              className="absolute right-2 top-2 text-green-600"
-            />
-          )}
+          <ExternalLink
+            size={24}
+            className="absolute right-2 top-2 text-green-600"
+          />
         </div>
       </Dialog.Trigger>
       <AnimatePresence>
@@ -70,7 +68,12 @@ export default function ProjectCard({
                 transition={{ duration: 0.5 }}
               >
                 <div className="relative h-60 w-full sm:h-[17.5rem] md:h-full">
-                  <Image src={data.image} alt={data.name} fill />
+                  <Image
+                    src={data.image}
+                    alt={data.name}
+                    fill
+                    className="rounded-md"
+                  />
                 </div>
 
                 <div className="flex flex-col">
@@ -80,16 +83,38 @@ export default function ProjectCard({
                   <Dialog.Description className="h-40 overflow-y-auto text-lg text-gray-500">
                     {data.description}
                   </Dialog.Description>
-                  {data.link !== null && (
-                    <Button
-                      as="link"
-                      href={data.link}
-                      target="_blank"
-                      className="mt-4 md:mt-auto"
-                    >
-                      Acessar
-                    </Button>
-                  )}
+                  <div className="mt-4 flex gap-2 md:mt-auto">
+                    {data.liveUrl !== null && (
+                      <Button
+                        as="link"
+                        href={data.liveUrl}
+                        target="_blank"
+                        className="flex flex-1 items-center justify-center"
+                      >
+                        Ver projeto
+                      </Button>
+                    )}
+                    {data.repos?.frontend && (
+                      <Button
+                        as="link"
+                        href={data.repos.frontend}
+                        target="_blank"
+                        className="flex flex-1 items-center justify-center"
+                      >
+                        Repositório Front-end
+                      </Button>
+                    )}
+                    {data.repos?.backend && (
+                      <Button
+                        as="link"
+                        href={data.repos.backend}
+                        target="_blank"
+                        className="flex flex-1 items-center justify-center"
+                      >
+                        Repositório Back-end
+                      </Button>
+                    )}
+                  </div>
                 </div>
 
                 <Dialog.Close asChild>

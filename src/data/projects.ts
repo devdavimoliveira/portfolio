@@ -1,58 +1,69 @@
 import { StaticImageData } from 'next/image'
 
-import selfService from '@/assets/projects/self-service.png'
-import curiosidadeDispersa from '@/assets/projects/curiosidadedispersa.png'
 import movieBox from '@/assets/projects/movie-box.png'
 import calculaDownload from '@/assets/projects/calculadownload.png'
 import providerLandingPage from '@/assets/projects/provider-landing-page.png'
 import radiomy from '@/assets/projects/radiomy.png'
+import kanplan from '@/assets/projects/kanplan.png'
 
 export type Project = {
   name: string
   description: string
   image: StaticImageData
-  link: string | null
+  liveUrl: string | null
+  repos: {
+    frontend?: string | null
+    backend?: string | null
+  } | null
 }
 
 export const projects: Project[] = [
+  {
+    name: 'Kanplan',
+    description: 'O Kanplan é uma plataforma de gestão de tarefas em equipe.',
+    image: kanplan,
+    liveUrl: null,
+    repos: {
+      frontend: 'https://github.com/devdavimoliveira/kanplan-app',
+      backend: 'https://github.com/devdavimoliveira/kanplan-api',
+    },
+  },
   {
     name: 'Radiomy',
     description:
       'O Radiomy é uma plataforma que oferece várias estações de rádio para ouvir.',
     image: radiomy,
-    link: 'https://radiomy.vercel.app',
+    liveUrl: 'https://radiomy.vercel.app',
+    repos: {
+      frontend: 'https://github.com/devdavimoliveira/radiomy',
+    },
   },
   {
     name: 'Calcula Download',
     description:
-      'Uma ferramenta que permite determinar quanto tempo leva para baixar ou enviar arquivos com base na velocidade da sua conexão. Rápido, simples e preciso!',
+      'Uma ferramenta que permite determinar quanto tempo leva para baixar ou enviar arquivos com base na velocidade da sua conexão.',
     image: calculaDownload,
-    link: 'https://www.calculadownload.com.br',
+    liveUrl: 'https://calcula-download.vercel.app/',
+    repos: {
+      frontend: 'https://github.com/devdavimoliveira/calcula-download',
+    },
   },
   {
     name: 'Provedor',
     description: 'Landing Page para um Provedor de Internet fictício.',
     image: providerLandingPage,
-    link: 'https://provider-landing-page.vercel.app',
-  },
-  {
-    name: 'Self-service',
-    description:
-      'Sistema de autoatendimento para restaurante com as seguintes funções: exibição do cardápio, personalização de pedidos, pagamento online e opções de retirada ou entrega.',
-    image: selfService,
-    link: null,
-  },
-  {
-    name: 'Curiosidade Dispersa',
-    description:
-      'Site de artigos sobre fatos surpreendentes e informações intrigantes que vão entreter e ampliar o conhecimento.',
-    image: curiosidadeDispersa,
-    link: null,
+    liveUrl: 'https://provider-landing-page.vercel.app',
+    repos: {
+      frontend: 'https://github.com/devdavimoliveira/provider-landing-page',
+    },
   },
   {
     name: 'Movie Box',
     description: 'Site informativo sobre filmes e séries.',
     image: movieBox,
-    link: null,
+    liveUrl: null,
+    repos: {
+      frontend: 'https://github.com/devdavimoliveira/movie-box',
+    },
   },
 ]
